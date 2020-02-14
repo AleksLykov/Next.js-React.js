@@ -6,4 +6,15 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
 `
 
-export default () => <Title>Footer</Title>
+export default () => (
+  <div className="container">
+      <div className="row justify-content-md-center">
+        <p>&copy; Copyrights <strong>Malgin Vadim</strong>. All Rights Reserved</p>
+      </div>
+      <div class="row justify-content-md-center"> 
+        <div>
+          Created with Malgin Vadim template by <a href="https://yandex.ru/">Malgin Vadim</a>
+        </div>
+      </div>  
+  </div>
+)

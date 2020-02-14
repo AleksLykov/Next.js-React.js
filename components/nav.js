@@ -4,21 +4,56 @@ import Link from 'next/link';
 import styled from 'styled-components'
 
 const Div = styled.div`
-  font-size: 50px;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  line-height: 5rem;
+  
 `
+const A = styled.a`
+    font-family: 'Marck Script', cursive;
+    margin-left: 4rem;
+    cursor: pointer;
+    &:hover {
+        color: red;
+    }
+  
+`
+const Box = styled.div`
+ margin-left: auto;
+`
+
+
 const Nav = () => (
-    <Div>
-        <Link href="/" as="/index">
-            <a>Home</a>
-        </Link>
-        <Link href="/about" as="/about">
-            <a>About</a>
-        </Link>
-        <Link href="/post" as="/post">
-            <a>Post</a>
-        </Link>
-    </Div>
-);
+    <>
+        <Div className='container-fluid'>
+            <Box>
+                <Link href="/" as="/index">
+                    <a>Главная</a>
+                </Link>
+                <Link href="/products" as="/about">
+                    <a>Продукция</a>
+                </Link>
+                <Link href="/about" as="/about">
+                    <a>Галерея работ</a>
+                </Link>
+                <Link href="/contact" as="/contact">
+                    <A>Конакты</A>
+                </Link>
+            </Box>
+        </Div>
+        <style jsx>{`
+            a {  
+                font-family: 'Marck Script', cursive;
+                margin-left: 4rem;
+                cursor: pointer;
+                color: white;
+            }
+            a:hover {
+                opacity: 0.6;
+            }
+        `}</style>
+    </>
+)
 
 export default Nav

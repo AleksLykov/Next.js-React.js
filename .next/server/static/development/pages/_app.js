@@ -412,7 +412,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: 'black',
     main: 'tomato'
   }
 };
